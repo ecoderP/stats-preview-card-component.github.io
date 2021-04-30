@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9375rem;
+    font-family: 'Inter', 'Lexend Deca', sans-serif;
+    line-height: 1.4;
+    background: hsl(233, 47%, 7%);
+    color: white;
+}
+/* Container */
+
+.container {
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+.box {
+    width: 31.3125rem;
+    height: 25rem;
+}
+/* left box */
+.left-box {
+    background: rgb(27, 25, 56);
+    padding: 2.4375rem 6.8125rem 3.375rem 4.1875rem;
+    border-bottom-left-radius: 2%;
+    border-top-left-radius: 2%;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.left-box h1 span {
+    color:rgb(170, 92, 219);
+    font-family: sans-serif, 'Lexend Deca';
+}
+.left-box p {
+    color: rgba(255, 255, 255, 0.75);
+}
+/* Image box */
+.image-box {
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+    background: center / contain no-repeat url(images/image-header-desktop.jpg) rgba(170, 92, 219, 0.5);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+.stats p {
+    text-transform: uppercase;
+}
+/* Footer credits*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .container {
+        margin: 5.5rem auto;
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+    .image-box {
+        width: 100%;
+        margin: auto;
+        border-top-left-radius: 2%;
+        border-bottom-right-radius: 0;
+        background: center / contain no-repeat url(images/image-header-mobile.jpg) rgba(170, 92, 219, 0.5);
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+    .left-box {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 2%;
+        padding: 2.75rem 2rem 2rem 2rem;
+        text-align: center;
+    }
+    .stats {
+        flex-direction: column-reverse;
+    }
+}
